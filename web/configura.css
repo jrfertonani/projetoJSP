@@ -1,0 +1,36 @@
+*{
+    margin: 0 auto;
+}
+
+header{
+    width: 90%;
+    padding:10px;
+    background-color: #ededed;
+}
+
+nav{
+    width: 90%;
+    padding:10px;
+    background-color: #ffff;
+    display: flex;
+    align-items:center;
+}
+
+main{
+    width: 90%;
+    height: 500px;
+    padding:10px;
+    background-color: #ededed;
+}
+
+footer{
+    width: 90%;
+    padding:10px;
+    background-color: #ffb3b;
+}
+
+iframe{
+      border:0px;
+      width: 100%;
+      height: 500px;
+}
