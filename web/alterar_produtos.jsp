@@ -45,7 +45,15 @@
             conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/testejsp", "root", "");
             //Alterar produtos
             st = conecta.preparedStatement("UPDATE produto SET descricao = ?, dataDeValidade = ?, dataDeCadastro = ?, preco = ?, ativo = ?, WHERE id = ? ");
-            
+            st.setString(1, descricao);
+            st.setDate(2, new java.sql.Date(dataDeValidade.getTime()));
+            st.setDate(3, new java.sql.Date(dataDeCadastro.getTime()));
+            st.setDouble(4, preco);
+            st.setBoolean(5, ativo);
+            st.execute(); // Executa o comando UPDATE
+            st.close();
+            conecta.close();
+            out.print("Product atualizado "+ descricao + "!!!!");
             
             
             
